@@ -5,7 +5,6 @@ import { galleryItems } from "./gallery-items.js";
 
 const refs = {
   listGalery: document.querySelector(".gallery"),
-  body: document.body,
 };
 
 function createGaleryTemplate(items) {
@@ -13,8 +12,9 @@ function createGaleryTemplate(items) {
     .map(({ preview, description, original }) => {
       return `<div class="gallery__item">
     <a class="gallery__link" href="${original}">
-    <img loading="lazy" width="354" height="240"
+    <img loading="lazy"
       class="gallery__image"
+      loading="lazy"
       src="${preview}"
       data-source="${original}"
       alt="${description}"
